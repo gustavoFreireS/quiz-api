@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js --watch src",
-    "sequelize": "sequelize"
+    "sequelize": "sequelize",
+    "config:db": "cp ./config/database.json.example ./config/database.json",
+    "heroku-postbuild": "npm run config:db && cp .env.example .env && NODE_ENV=production NODE_PATH=. npm run sequelize db:migrate --url=$DATABASE_URL"
   },
   "license": "MIT",
   "dependencies": {
