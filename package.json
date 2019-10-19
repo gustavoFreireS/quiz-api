@@ -13,6 +13,7 @@
   "dependencies": {
     "fastexpress": "latest",
     "mysql2": "^1.6.1",
+    "pg": "^7.12.1",
     "sequelize": "5.14.0",
     "sequelize-cli": "^5.2.0"
   },
